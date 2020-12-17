@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital@1&display=swap');
+
+
+.start-page{
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    margin-top: 100px;
+    background-color: greenyellow;
+    padding: 20px;
+    border-radius: 6px;
+    font-family: 'Work Sans';
+    
+}
+
+.welcome{
+    margin-bottom: 20px;
+    color: green;
+    
+}
+
+.buttons{
+    margin-top: 20px;
+    
+
+}
+
+.buttons button{
+    width: 90px;
+    color: white;
+    background-color: rgba(77, 146, 9, 0.74);
+    margin: 0 8px;
+    border-radius: 3px;
+    box-shadow: none;
+    border: 1px solid white;
+    padding: 5px;
+    font-family: 'Work Sans';
+}
+
+.buttons button:hover{
+    opacity: 0.6;
+    transition: opacity 0.4s ease-out 0.2s;
+}
+
+.buttons button:active{
+    box-shadow: 5px 3px 10px 1px greenyellow;
+    background-color: grey;
+}

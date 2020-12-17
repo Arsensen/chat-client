@@ -1,0 +1,14 @@
+.App{
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media (max-width: 320px){
+    /* Исправить разъезжающиеся футтер и хедер */
+}
+
+body{
+    margin: 0 13px;
+}

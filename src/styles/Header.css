@@ -1,0 +1,60 @@
+@font-face {
+    font-family: Dancing-Script;
+    src: url("../assets/fonts/DancingScript-Bold.ttf");
+    font-weight: bolder;
+}
+
+.Header{
+    display: grid;
+    width: 100%;
+    box-sizing: border-box;
+    grid-template-areas: "a b b b b c";
+    border-top: 1px solid green;
+    border-bottom: 1px solid green;
+    padding: 1%;
+    max-height: 150px;
+}
+
+.Header img{
+    grid-area: a;
+    max-width: 100px;
+}
+
+.logo-text{
+    grid-area: b;
+    font-size: 43px;
+    font-family: Dancing-Script;
+    color: rgba(77, 146, 9, 0.74);
+    align-self: center;
+    justify-self: center;
+}
+
+.login-wrap{
+    grid-area: c;
+    display: flex;
+    align-self: stretch;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.login{
+    width: fit-content;
+    font-size: 30px;
+    font-family: Dancing-Script;
+    color: rgba(77, 146, 9, 0.74);
+    padding: 20px;
+    background-color: greenyellow;
+    border: 1px solid rgba(172, 255, 47, 0.952);
+    border-radius: 5px;
+}
+
+.login:hover{
+    opacity: 0.7;
+    transition: opacity 0.4s ease-out 0.2s;
+    cursor: pointer;
+}
+
+.login:active{
+    box-shadow: 5px 3px 10px 1px greenyellow;
+    background-color: grey;
+}
