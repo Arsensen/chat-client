@@ -9,13 +9,11 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    
     margin-top: 100px;
     background-color: greenyellow;
     padding: 20px;
     border-radius: 6px;
     font-family: 'Work Sans';
-    
 }
 
 .welcome{
@@ -42,11 +40,10 @@
     font-family: 'Work Sans';
 }
 
-.buttons button:hover{
+/* .buttons button:hover{
     opacity: 0.6;
-    transition: opacity 0.4s ease-out 0.2s;
 }
-
+ */
 .buttons button:active{
     box-shadow: 5px 3px 10px 1px greenyellow;
     background-color: grey;

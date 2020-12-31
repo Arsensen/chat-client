@@ -1,0 +1,79 @@
+.chatPage{
+    display: grid;
+    width: 100%;
+    grid-template-areas: "contacts messages";
+    padding: 0.5%;
+    column-gap: 1%;
+    grid-template-columns: 19% 79%;
+    color: green;
+}
+
+                                                                        /* CONTACTS */
+
+.contacts{
+    grid-area: "contacts";
+    padding: 1%;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: greenyellow;
+    border-radius: 2px;
+    min-width: fit-content;
+}
+
+.contacts form input{
+    box-sizing: border-box;
+    width: 75%;
+    margin: 0;
+}
+
+.contacts > *{
+    border-bottom: 1px solid green;
+}
+
+.contacts-form{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contacts-form button{
+    width: 20%;
+    min-width: fit-content;
+    height: 30px;
+    color: white;
+    border-radius: 5px;
+    background-color: green;
+}
+
+.contacts-block{
+    width: 100%;
+    /* height: 5em; */
+    box-sizing: border-box;
+    white-space: nowrap;
+    min-width: fit-content;
+}
+
+.contacts-block img{
+    max-width: 30px;
+}
+
+
+                                                                        /* MESSAGES */
+
+.messages{
+    grid-area: "messages";
+    padding: 1%;
+    background-color: greenyellow;
+    border-radius: 2px;
+}
+
+.messages form input{
+    box-sizing: border-box;
+    width: 95%;
+}
+
+.messages button{
+    height: 30px;
+    color: white;
+    background-color: green;
+}

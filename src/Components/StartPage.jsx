@@ -15,7 +15,7 @@ const StartPage = ({loginOpened, registration, setLoginClosed, setLoginOpened, s
                 <button className="registration" onClick={setRegistrationOpened}>Registration</button>
             </div>
         </div>
-        {(loginOpened || registration) && <LoginWindow registration={registration} close={setLoginClosed} />}
+        {(loginOpened || registration) && <LoginWindow setLoginOpened={setLoginOpened} setRegistrationOpened={setRegistrationOpened} registration={registration} close={setLoginClosed} />}
         </>
     )
 }
