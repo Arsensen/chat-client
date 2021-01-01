@@ -1,20 +1,31 @@
 .chatPage{
-    display: grid;
+    display: flex;
+    
     width: 100%;
-    grid-template-areas: "contacts messages";
-    padding: 0.5%;
-    column-gap: 1%;
-    grid-template-columns: 19% 79%;
+    padding: 0.5% 0;
+    justify-content: space-between;
     color: green;
+}
+
+@media (max-width: 420px){
+    .chatPage{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .contacts{
+        margin-bottom: 2%;
+    }
 }
 
                                                                         /* CONTACTS */
 
 .contacts{
-    grid-area: "contacts";
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin-right: 0.5%;
     padding: 1%;
     box-sizing: border-box;
-    overflow: hidden;
     background-color: greenyellow;
     border-radius: 2px;
     min-width: fit-content;
@@ -57,11 +68,18 @@
     max-width: 30px;
 }
 
+                                /* Contact-list */
+.namelist{
+    display: flex;
+    justify-content: space-between;
+}
+
+
 
                                                                         /* MESSAGES */
 
 .messages{
-    grid-area: "messages";
+    width: 74%;
     padding: 1%;
     background-color: greenyellow;
     border-radius: 2px;
@@ -77,3 +95,4 @@
     color: white;
     background-color: green;
 }
+

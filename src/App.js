@@ -1,12 +1,12 @@
 import React from 'react'
-import Footer from './Components/Footer';
-import Header from './Components/Header';
+import Footer from './Components/Footer'
+import Header from './Components/Header'
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import StartPage from './Components/StartPage'
 import './styles/App.css'
-import ChatPage from './Components/ChatPage';
+import ChatPage from './Components/ChatPage'
 import {Provider} from 'react-redux'
-import store from './BLL/store';
+import store from './BLL/store'
 
 function App() {
   return (
