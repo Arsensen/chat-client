@@ -1,0 +1,58 @@
+.messages{
+    width: 74%;
+    padding: 1%;
+    background-color: greenyellow;
+    border-radius: 2px;
+}
+
+.messages-info{
+    display: flex;
+    max-height: 2em;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid green;
+    padding-bottom: 1em;
+}
+
+.messages-info img{
+    max-height: 2em;
+    max-width: 2em;
+    border-radius: 50%;
+}
+
+.messages form{
+    display: flex;
+    align-items: baseline;
+    border-top: 1px solid green;
+    padding-top: 1em;
+}
+
+.messages form input{
+    box-sizing: border-box;
+}
+
+.messages button{
+    max-width: 80px;
+    margin-left: 1em;
+}
+
+.messages-ul{
+    display: flex;
+    flex-direction: column;
+    padding: 0 1em;
+    
+    list-style: none;
+}
+
+.messages-ul li{
+    box-sizing: border-box;
+    width: fit-content;
+    padding: 1em;
+    border-radius: 10px;
+    background-color: rgb(122, 190, 19);
+}
+
+.messages-ul .my-message{
+    align-self: flex-end;
+    background-color: rgb(210, 241, 163);
+}

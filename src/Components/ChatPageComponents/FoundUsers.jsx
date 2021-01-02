@@ -9,7 +9,7 @@ const FoundUsers = ({array, sendAddContact, sendDeleteContact, fetchMessages})=>
     let chooseDialog = array.buttonName === 'Add' ? ()=>{} : (id)=>()=>{fetchMessages(id)}
     return (
         <div className='contacts-block'>
-                <div>{array.title}</div>
+                <div className="contact-block-title">{array.title}</div>
                 {array.users.map(({userName, src, id})=>{
                     return(
                         <div key={id} className="namelist" onClick={chooseDialog(id)}>  

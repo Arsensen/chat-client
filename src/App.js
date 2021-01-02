@@ -16,7 +16,7 @@ function App() {
         <Header />
         <Switch>
           <Route exact path="/" component={StartPage} />
-          <Route exact path="/chat/:id" component={ChatPage} />
+          <Route exact path="/chat/:userId" component={ChatPage} />
         </Switch>
         <Footer />
       </div>

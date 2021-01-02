@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
 import FoundUsers from './FoundUsers'
+import '../../styles/Contacts.css'
 
 const Contacts = ({recommendedUsers, myContacts, foundUsers})=>{
     const [currentInput, setCurrentInput] = useState(null)
@@ -14,7 +15,7 @@ const Contacts = ({recommendedUsers, myContacts, foundUsers})=>{
     }
     const contactsList = findUsers ? 
             <>
-                <div className="contacts-back-btn" onClick={()=>{setFindUsers(false)}}> &#8592; My Contacts</div>
+                <div className="contacts-back-btn" onClick={()=>{setFindUsers(false)}}><span>&#8592;</span><span>Contacts</span></div>
                 <FoundUsers array={foundUsers} />
             </> 
             :

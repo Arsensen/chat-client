@@ -1,5 +1,5 @@
 const initialState={
-    title: 'My Contacts',
+    title: 'Contacts',
     buttonName: 'Delete',
     users:  [{
         userName: 'Founded',
