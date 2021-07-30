@@ -1,14 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../styles/LoginWindow.css'
 
-export const LoginWindow = ({registration, close, setLoginOpened, setRegistrationOpened})=>{    
+const LoginWindow = ({registration, close, setLoginOpened, setRegistrationOpened, toLogin})=>{    
     let phrase = `Please, insert you ${registration ? 'email,' : ''} login and password`
     let coverHeight = Math.max(
         document.body.scrollHeight, document.documentElement.scrollHeight,
         document.body.offsetHeight, document.documentElement.offsetHeight,
         document.body.clientHeight, document.documentElement.clientHeight
     )
+    let [form, setForm] = useState({login: '', password: '', email: ''})
+
+    const toLoginHOC = (event)=>{
+        event.preventDefault()
+        toLogin({...form})
+    }
     
+    const changeForm = (event)=>{
+        event.preventDefault()
+        setForm({...form, [event.target.name]: event.target.value})
+    }
+
     return (
         <div className="auth-window">
             <div className="login-modal">
@@ -18,16 +29,16 @@ export const LoginWindow = ({registration, close, setLoginOpened, setRegistratio
                         <div className={"reg-switch" + (registration ? " checked-log-reg" : '')} onClick={setRegistrationOpened}>CREATE ACCOUNT</div>
                 </div>
                 <form>
-                    {registration && <input type="text" placeholder="email" />}
-                    <input type="text" placeholder="login" />
-                    <input type="password" placeholder="password" />
+                    {registration && <input type="text" placeholder="email" name="email" onChange={changeForm} />}
+                    <input type="text" placeholder="login" name="login" onChange={changeForm} />
+                    <input type="password" placeholder="password" name="password" onChange={changeForm} />
                     {registration ? 
                         <div>
-                            <button>Create Account</button>
+                            <button type="submit">Create Account</button>
                         </div> 
                         : 
                         <div>
-                            <button type="submit">Sign in</button>
+                            <button type="submit" onClick={toLoginHOC}>Sign in</button>
                         </div>
                     }
                 </form>
@@ -38,3 +49,5 @@ export const LoginWindow = ({registration, close, setLoginOpened, setRegistratio
         </div>
     )
 }
+
+export default LoginWindow

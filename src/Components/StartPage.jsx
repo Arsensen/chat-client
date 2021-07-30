@@ -1,9 +1,10 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { loginization } from '../BLL/fetchers/startPageHandlers'
 import '../styles/StartPage.css'
-import { LoginWindow } from './LoginWindow'
+import LoginWindow from './LoginWindow'
 
-const StartPage = ({loginOpened, registration, setLoginClosed, setLoginOpened, setRegistrationOpened})=>{
+const StartPage = ({loginOpened, registration, setLoginClosed, setLoginOpened, setRegistrationOpened, toLogin})=>{
     return(
         <>
         <div className="start-page">
@@ -15,7 +16,7 @@ const StartPage = ({loginOpened, registration, setLoginClosed, setLoginOpened, s
                 <button className="registration" onClick={setRegistrationOpened}>Registration</button>
             </div>
         </div>
-        {(loginOpened || registration) && <LoginWindow setLoginOpened={setLoginOpened} setRegistrationOpened={setRegistrationOpened} registration={registration} close={setLoginClosed} />}
+        {(loginOpened || registration) && <LoginWindow setLoginOpened={setLoginOpened} setRegistrationOpened={setRegistrationOpened} registration={registration} close={setLoginClosed} toLogin={toLogin} />}
         </>
     )
 }
@@ -31,7 +32,8 @@ const mapDispatch = (dispatch)=>{
     return{
         setLoginOpened: ()=>{dispatch({type: 'LOGIN_OPEN'})},
         setLoginClosed: ()=>{dispatch({type: 'LOGIN_CLOSE'})},
-        setRegistrationOpened: ()=>{dispatch({type: 'REGISTRATION_OPENED'})}
+        setRegistrationOpened: ()=>{dispatch({type: 'REGISTRATION_OPENED'})},
+        toLogin: (form)=>{ dispatch(loginization(form)) }
     }
 }
 

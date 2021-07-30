@@ -5,7 +5,7 @@ const MessagesList = ({arrayOfMessages})=>{
         <ul className="messages-ul">
             {arrayOfMessages.map((mes)=>{
                 return (
-                    <li className={mes.me && 'my-message'}>
+                    <li className={mes.me ? 'my-message' : ''} key={mes.message + mes.date}>
                         {mes.message}
                     </li>
                 )

@@ -40,7 +40,6 @@
     display: flex;
     flex-direction: column;
     padding: 0 1em;
-    
     list-style: none;
 }
 
@@ -49,10 +48,21 @@
     width: fit-content;
     padding: 1em;
     border-radius: 10px;
-    background-color: rgb(122, 190, 19);
+    background-color: rgb(176, 181, 196);
+    margin-bottom: 0.2em;
 }
 
 .messages-ul .my-message{
     align-self: flex-end;
-    background-color: rgb(210, 241, 163);
+    /* background-color: rgb(210, 241, 163); */
+    background-color: honeydew;
 }
+
+.messages-online{
+    margin-left: 1em;
+    font-size: 80%;
+    font-style: italic;
+    color: grey;
+    opacity: 0.7;
+}
+

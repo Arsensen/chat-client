@@ -2,8 +2,9 @@ import React, { useState } from 'react'
 import { connect } from 'react-redux'
 import FoundUsers from './FoundUsers'
 import '../../styles/Contacts.css'
+import { bringMessages } from '../../BLL/fetchers/chatPageHandlers'
 
-const Contacts = ({recommendedUsers, myContacts, foundUsers})=>{
+const Contacts = ({recommendedUsers, myContacts, foundUsers, fetchMessages})=>{
     const [currentInput, setCurrentInput] = useState(null)
     const [findUsers, setFindUsers] = useState(false)
 
@@ -20,7 +21,7 @@ const Contacts = ({recommendedUsers, myContacts, foundUsers})=>{
             </> 
             :
             <>
-                {myContacts.users.length ? <FoundUsers array={myContacts} /> : <div className="contacts-block">No contacts have found</div>}
+                {myContacts.users.length ? <FoundUsers array={myContacts} fetchMessages={fetchMessages} /> : <div className="contacts-block">No contacts have found</div>}
                 <FoundUsers array={recommendedUsers} />
             </>
             
@@ -47,7 +48,7 @@ const mapState = (state)=>{
 
 const mapDispatch = (dispatch)=>{
     return {
-        
+        fetchMessages: (id, userName, src)=>{dispatch(bringMessages(id, userName, src))}
     }
 }
 

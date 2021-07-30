@@ -24,3 +24,14 @@
         margin-bottom: 2%;
     }
 }
+
+.chatPage input {
+    border: 1px solid green;
+    background-color: honeydew;
+    border-radius: 3px; 
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    outline: none;
+    font-family: Tahoma;
+}

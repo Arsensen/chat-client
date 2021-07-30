@@ -31,9 +31,14 @@ const initialState = {
 }
 
 const messagesReducer = (state = initialState, action) => {
-    switch (action){
+    let newState = {...state}
+    switch (action.type){
+        case 'UPDATE_MESSAGES_INFO':
+            newState.userName = action.userName
+            newState.src = action.src
+            return newState
         case 'REFRESH_MESSAGES':
-            return state
+            return newState
         default:
             return state
     }

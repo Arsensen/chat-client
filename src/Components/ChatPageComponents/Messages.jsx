@@ -7,7 +7,7 @@ const Messages = ({userName, src, messages})=>{
     return(
         <div className="messages">
             <div className="messages-info">
-                <img src={src} alt="Foto"/><span>{userName}</span><span>online</span>
+                <img src={src} alt="Foto"/><span>{userName}</span> <span className="messages-online">online</span>
             </div>
             <div className="messages-cover">
                 <MessagesList arrayOfMessages={messages} />
